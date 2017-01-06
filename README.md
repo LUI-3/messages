@@ -1,2 +1,2 @@
-# forms-extras
-LUI-3 framework forms - extras component
+# messages
+LUI-3 framework messages component
