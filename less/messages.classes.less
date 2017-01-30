@@ -1,0 +1,37 @@
+// LUI-3
+// MESSAGES
+
+
+.@{lui_class_prefix}_message when (@lui_messages_class_enabled = true){
+	.lui.message.this();
+
+	&.positive:not(.colored) {
+		.lui.message.positive();
+	}
+
+	&.notice:not(.colored) {
+		.lui.message.notice();
+	}
+
+	&.warning:not(.colored) {
+		.lui.message.warning();
+	}
+
+	&.negative:not(.colored) {
+		.lui.message.negative();
+	}
+
+	// COLORED
+	&.colored.positive {
+		.lui.message.colored-positive();
+	}
+	&.colored.notice {
+		.lui.message.colored-notice();
+	}
+	&.colored.warning {
+		.lui.message.colored-warning();
+	}
+	&.colored.negative {
+		.lui.message.colored-negative();
+	}
+}

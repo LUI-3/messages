@@ -1,0 +1,113 @@
+// LUI-3
+// MESSAGES
+
+
+.lui.message when (@lui_messages_mixins_enabled = true){
+	.this(){
+		.lui.flexbox.block();
+		.lui.flexbox.align-items(flex-start);
+		.lui.flexbox.justify-content(flex-start);
+
+		padding: 15px 0;
+
+
+		&.colored {
+			background: @lui_messages_colored_default_bg;
+			margin: 15px 0;
+			padding: 15px;
+		}
+
+		&[class*="fa_b"]{
+			padding-left: 0;
+
+			&:before{
+				display: block;
+				width: 45px;
+				text-align: left;
+				font-size: 28px;
+			}
+
+			&.colored:before {
+				text-align: center;
+				width: 60px;
+			}
+		}
+
+		& > .inside {
+			width: calc(~"100% - 50px");
+			//.lui.flexbox.flex(1 1 auto);
+
+			.title {
+				padding: 5px 0;
+				font-size: 18px;
+				font-weight: bold;
+			}
+
+			.text {
+				padding: 5px 0 0 0;
+			}
+		}
+
+	}
+
+	.positive() {
+		.title {
+			color: @lui_messages_positive_color;
+		}
+
+		&[class*="fa_b"]:before {
+			color: @lui_messages_positive_color;
+		}
+	}
+
+	.notice() {
+		.title {
+			color: @lui_messages_notice_color;
+		}
+
+		&[class*="fa_b"]:before {
+			color: @lui_messages_notice_color;
+		}
+	}
+
+	.warning() {
+		.title {
+			color: @lui_messages_warning_color;
+		}
+
+		&[class*="fa_b"]:before {
+			color: @lui_messages_warning_color;
+		}
+	}
+
+	.negative() {
+		.title {
+			color: @lui_messages_negative_color;
+		}
+
+		&[class*="fa_b"]:before {
+			color: @lui_messages_negative_color;
+		}
+	}
+
+	// COLORED
+	.colored-positive() {
+		background: @lui_messages_colored_positive_bg;
+		color: @lui_messages_colored_positive_text;
+	}
+
+	.colored-notice() {
+		background: @lui_messages_colored_notice_bg;
+		color: @lui_messages_colored_notice_text;
+	}
+
+	.colored-warning() {
+		background: @lui_messages_colored_warning_bg;
+		color: @lui_messages_colored_warning_text;
+	}
+
+	.colored-negative() {
+		background: @lui_messages_colored_negative_bg;
+		color: @lui_messages_colored_negative_text;
+	}
+}
