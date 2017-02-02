@@ -1,5 +1,8 @@
-// LUI-3
-// MESSAGES
+// LUI-3 FRAMEWORK
+// github.com/LUI-3
+// originally created by Jiří Bělský (github.com/wUFr)
+// ----
+// MESSAGES - MIXINS
 
 
 .lui.message when (@lui_messages_mixins_enabled = true){
@@ -7,9 +10,7 @@
 		.lui.flexbox.block();
 		.lui.flexbox.align-items(flex-start);
 		.lui.flexbox.justify-content(flex-start);
-
 		padding: 15px 0;
-
 
 		&.colored {
 			background: @lui_messages_colored_default_bg;
@@ -47,7 +48,6 @@
 				padding: 5px 0 0 0;
 			}
 		}
-
 	}
 
 	.positive() {
