@@ -30,3 +30,11 @@
 
 @lui_messages_colored_negative_bg:		@color_negative;
 @lui_messages_colored_negative_text:	white;
+
+
+// DEBUG MODE - CONFIG VALUES
+.lui_config_values when (@lui_debug = true){
+	--lui_messages_config: "LUI-3_messages/less/messages.config.less";
+	--lui_messages_class_enabled: @lui_messages_class_enabled;
+	--lui_messages_mixins_enabled: @lui_messages_mixins_enabled;
+}
